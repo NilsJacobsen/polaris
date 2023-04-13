@@ -272,6 +272,7 @@ export function DatePicker({
             handleMonthChangeClick(showPreviousMonth, showPreviousYear)
           }
         />
+        February 2018
         <Button
           plain
           icon={ArrowRightMinor}
