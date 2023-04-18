@@ -127,6 +127,7 @@ export function WithActivatorRef() {
   const handleChange2 = useCallback(() => setActive2(!active2), [active2]);
 
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonRef2 = useRef<HTMLButtonElement>(null);
 
   return (
     <Page
@@ -140,12 +141,13 @@ export function WithActivatorRef() {
         {
           content: 'Unarchive',
           id: 'unarchive',
-          ref: buttonRef,
+          ref: buttonRef2,
           onAction: () => setActive2(true),
         },
         {
           id: 'cancel-order',
           content: 'Cancel order',
+          ref: buttonRef2,
           onAction: () => setActive(true),
         },
       ]}
