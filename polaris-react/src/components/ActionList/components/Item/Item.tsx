@@ -1,4 +1,5 @@
-import React, {forwardRef, Ref} from 'react';
+import React, {forwardRef} from 'react';
+import type {Ref} from 'react';
 
 import {classNames} from '../../../../utilities/css';
 import type {ActionListItemDescriptor} from '../../../../types';
