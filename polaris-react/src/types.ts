@@ -112,7 +112,7 @@ export interface Action {
   /** Ref to set on the button element */
   ref?: RefObject<HTMLElement>;
   /** Callback when an action takes place */
-  onAction?(id?: string): void;
+  onAction?(): void;
   /** Callback when mouse enter */
   onMouseEnter?(): void;
   /** Callback when element is touched */
