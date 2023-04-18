@@ -114,19 +114,20 @@ export function WithoutPrimaryActionInHeader() {
 }
 
 export function WithActivatorRef() {
-  const [active, setActive] = useState(true);
-  const [active2, setActive2] = useState(false);
+  const [active, setActive] = useState(false);
+  const [active2, setActive2] = useState(true);
   const [hasRolledUp, setHasRolledUp] = useState(false);
-  console.log('hasRolledUp', hasRolledUp);
+
   const onActionRollup = useCallback((hasRolledUp: boolean) => {
-    console.log('rollup stuff');
+    console.log('rolling up actions');
     setHasRolledUp(hasRolledUp);
   }, []);
 
   const handleChange = useCallback(() => setActive(!active), [active]);
   const handleChange2 = useCallback(() => setActive2(!active2), [active2]);
+
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const buttonRef2 = useRef<HTMLButtonElement>(null);
+
   return (
     <Page
       breadcrumbs={[{content: 'Orders', url: '#'}]}
@@ -139,13 +140,12 @@ export function WithActivatorRef() {
         {
           content: 'Unarchive',
           id: 'unarchive',
-          ref: buttonRef2,
+          ref: buttonRef,
           onAction: () => setActive2(true),
         },
         {
           id: 'cancel-order',
           content: 'Cancel order',
-          ref: buttonRef,
           onAction: () => setActive(true),
         },
       ]}
