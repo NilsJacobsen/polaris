@@ -13,7 +13,7 @@ interface SecondaryAction extends ButtonProps {
   getOffsetWidth?(width: number): void;
 }
 
-export const SecondaryAction = forwardRef(function SecondaryAction(
+export const SecondaryAction = forwardRef((
   {
     children,
     destructive,
@@ -23,7 +23,7 @@ export const SecondaryAction = forwardRef(function SecondaryAction(
     ...rest
   }: SecondaryAction,
   ref,
-) {
+) => {
   const secondaryActionsRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
