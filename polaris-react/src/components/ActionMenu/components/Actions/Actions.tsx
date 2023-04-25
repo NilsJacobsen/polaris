@@ -172,8 +172,8 @@ export function Actions({actions = [], groups = [], onActionRollup}: Props) {
     debouncedMeasureActions,
   ]);
 
-  useEventListener('resize', () => {
-    handleResize;
+  useEventListener('resize', (event) => {
+    handleResize(event);
   });
 
   useIsomorphicLayoutEffect(() => {
