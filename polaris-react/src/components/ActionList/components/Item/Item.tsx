@@ -1,5 +1,5 @@
 import React, {forwardRef} from 'react';
-import type {Ref} from 'react';
+import type {Ref, LegacyRef} from 'react';
 
 import {classNames} from '../../../../utilities/css';
 import type {ActionListItemDescriptor} from '../../../../types';
@@ -118,7 +118,7 @@ export const Item = forwardRef(function Item(
       {contentElement}
     </UnstyledLink>
   ) : (
-    <UnstyledButton
+    <button
       id={id}
       type="button"
       className={className}
@@ -128,10 +128,10 @@ export const Item = forwardRef(function Item(
       onMouseUp={handleMouseUpByBlurring}
       role={role}
       onMouseEnter={onMouseEnter}
-      ref={ref}
+      ref={ref as LegacyRef<HTMLButtonElement> | undefined}
     >
       {contentElement}
-    </UnstyledButton>
+    </button>
   );
 
   return (
