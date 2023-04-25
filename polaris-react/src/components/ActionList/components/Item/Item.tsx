@@ -12,7 +12,6 @@ import styles from '../../ActionList.scss';
 import {handleMouseUpByBlurring} from '../../../../utilities/focus';
 import {Inline} from '../../../Inline';
 import {Box} from '../../../Box';
-import {UnstyledButton} from '../../../UnstyledButton';
 
 export type ItemProps = ActionListItemDescriptor;
 
