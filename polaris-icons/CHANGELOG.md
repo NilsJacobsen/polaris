@@ -1,5 +1,13 @@
 # Changelog
 
+## 6.15.0
+
+### Minor Changes
+
+- [#9104](https://github.com/Shopify/polaris/pull/9104) [`92fbd1308`](https://github.com/Shopify/polaris/commit/92fbd1308b6ea0ec22c3f628775e4fbbd5b0921e) Thanks [@pbojinov](https://github.com/pbojinov)! - Added AnalyticsBarHorizontalMinor, AnalyticsBardStackedMinor, AnalyticsCohortMinor, AnalyticsDonutMinor, AnalyticsFunnelMinor, AnalyticsLineMinor, AnalyticsTableMinor, ListMinor.
+
+  Updated ListMajor
+
 ## 6.14.0
 
 ### Minor Changes
